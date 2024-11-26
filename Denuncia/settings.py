@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Denuncia',
     'users',
-    'denuncias',    
+        
 ]
 
 MIDDLEWARE = [

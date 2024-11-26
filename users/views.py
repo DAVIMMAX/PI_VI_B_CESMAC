@@ -11,6 +11,7 @@ from .models import Profile
 
 class Cadastro(CreateView):
     
+    
     model = User
     form_class = UserRegistrationForm
     template_name = 'cadastro.html'

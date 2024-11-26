@@ -8,10 +8,15 @@ class UserRegistrationForm(forms.ModelForm):
         label='Senha'
     )
 
+    username =  forms.CharField(
+        widget = forms.TextInput(attrs={'placeholder':'Digite o Nome'}),
+        help_text='' 
+    )
 
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
+        
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
