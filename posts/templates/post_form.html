@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class=""> <H1>Qual sua Denúncia?</H1></div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Denúncia</button>
+</form>
+{% endblock %}

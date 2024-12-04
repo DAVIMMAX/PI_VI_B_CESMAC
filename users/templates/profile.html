@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Quase lá!</h1>
+    <p>Para completar o seu cadastro, será necessário preencher algumas informações essenciais!</p>
+<div class="container mt-5">
+    <div class="container-fluid mt-5">
+        <div class="row mt-5">
+            <div class="col"></div>
+            <div class="col">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Atualizar_Perfil</button>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div class="">
+    <h2>Denúncias</h2>
+    <div class="card">
+        <div class="card-body">
+            <a href="{% url 'cadastrarPost' %}"><strong>Cadastrar nova Denúncia</strong></a>
+        </div>
+    </div>
+</div>
+{% if posts %}
+    {% for post in posts %}
+
+        <div class="card mt-4">
+            <h4 class="card-header">{{ post.title }}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{ post.message }}</h5>
+                <p class="card-text">Enviado em: {{ post.data }}</p>
+                <a href="{% url 'post_delete' post.id %}">Excluir</a>
+        {% if post.prova %}
+        <p>
+            <a href="{{ post.prova.url }}" download>Baixar Prova</a>
+        </p>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+</div>
+</div>
+{% else %}
+<p>Nenhum post encontrado para este perfil.</p>
+{% endif %}
+{% endblock %}

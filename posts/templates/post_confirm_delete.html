@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirmar Exclusão</h2>
+<p>Você tem certeza de que deseja excluir este post?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, excluir</button>
+    <a href="{% url 'post-list' %}">Cancelar</a>
+</form>
+{% endblock %}

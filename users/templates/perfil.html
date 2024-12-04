@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Perfil do Usuário</h1>
+<p><strong>Telefone:</strong> {{ profile.telefone }}</p>
+<p><strong>Email:</strong> {{ profile.user.email }}</p>
+<p><strong>CPF:</strong> {{ profile.cpf }}</p>
+
+<h2>Posts</h2>
+{% if posts %}
+    <ul>
+        {% for post in posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.message }}</p>
+            <p>Enviado em: {{ post.data }}</p>
+            {% if post.prova %}
+                <p><a href="{{ post.prova.url }}" download>Baixar Prova</a></p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum post encontrado para este perfil.</p>
+{% endif %}
+
+<a href="{% url 'home' pk=request.user.pk %}">Voltar para Home</a>
+{% endblock %}

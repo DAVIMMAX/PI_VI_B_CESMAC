@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+    th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+    <h1>Seus dados e o que pode acontecer:</h1>
+    <table>
+        <tr>
+            <th>Ocorrência</th>
+            <th>Descrição</th>
+            <th>Dispositivos Legais</th>
+        </tr>
+        <tr>
+            <td>Exposição Acidental</td>
+            <td>Dados sensíveis ou confidenciais são divulgados involuntariamente, por erro humano ou falha de sistema.
+            </td>
+            <td>
+                <ul>
+                    <li>LGPD (Lei Geral de Proteção de Dados - Lei nº 13.709/2018)</li>
+                    <li>Art. 6º, I – Garantia de que os dados sejam tratados para finalidades legítimas.</li>
+                    <li>Art. 46º – Exige medidas de segurança para proteger dados contra acessos não autorizados.</li>
+                    <li>Código Penal Brasileiro: Art. 154-A – Invasão de dispositivo informático (caso envolva
+                        terceiros).</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Acessos Não Autorizados</td>
+            <td>Quando alguém acessa informações ou áreas restritas sem permissão.</td>
+            <td>
+                <ul>
+                    <li>LGPD: Art. 6º, VII – Exige segurança no tratamento dos dados.</li>
+                    <li>Art. 44º – Penalidades para quem viola as normas de proteção de dados.</li>
+                    <li>Código Penal: Art. 154-A – Invasão de dispositivo informático.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Perda ou Roubo de Dispositivos</td>
+            <td>Dispositivos como celulares ou laptops, contendo informações sensíveis, são perdidos ou roubados.</td>
+            <td>
+                <ul>
+                    <li>LGPD: Art. 46º – Requer medidas para proteger dados em caso de incidentes.</li>
+                    <li>Art. 48º – Notificação das autoridades em caso de vazamento de dados.</li>
+                    <li>Código Penal: Art. 155º – Furto e Art. 157º – Roubo.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Phishing</td>
+            <td>Fraudes que tentam obter informações sensíveis, como senhas, através de mensagens falsas.</td>
+            <td>
+                <ul>
+                    <li>Código Penal: Art. 171 – Estelionato.</li>
+                    <li>Art. 154-A – Invasão de dispositivo informático (se envolver dispositivos). </li>
+                    <li>Marco Civil da Internet: Art. 7º, VI – Protege contra o uso indevido de dados pessoais.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Ataques de Engenharia Social</td>
+            <td>Técnicas manipulativas para enganar pessoas e obter informações ou realizar ações prejudiciais.</td>
+            <td>
+                <ul>
+                    <li>Código Penal: Art. 171 – Estelionato.</li>
+                    <li>LGPD: Art. 46º – Requer medidas contra ataques de engenharia social.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Malware</td>
+            <td>Programas maliciosos criados para roubar dados ou danificar sistemas.</td>
+            <td>
+                <ul>
+                    <li>Código Penal: Art. 154-A – Invasão de dispositivo.</li>
+                    <li>Art. 266 – Perturbação de serviço informático.</li>
+                    <li>Marco Civil da Internet: Art. 12 – Punição por comprometer a segurança de informações.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Acesso Interno Não Autorizado</td>
+            <td>Funcionários ou colaboradores acessam informações fora do seu escopo permitido.</td>
+            <td>
+                <ul>
+                    <li>LGPD: Art. 37º – Registro de atividades para evitar abusos.</li>
+                    <li>Art. 46º – Medidas de segurança dentro das organizações.</li>
+                    <li>Código Penal: Art. 154-A – Invasão de dispositivo.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Outros</td>
+            <td>Ocorrências não classificadas acima, mas que ainda representam riscos ou violações.</td>
+            <td>
+                <ul>
+                    <li>LGPD: Art. 48º – Notificação obrigatória em caso de incidentes.</li>
+                    <li>Art. 52º – Sanções administrativas.</li>
+                    <li>Marco Civil da Internet: Art. 10 – Protege a privacidade e segurança dos dados.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}
